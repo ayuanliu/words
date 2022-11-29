@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>单词吧</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script type="module" src="./js/main.js"></script>
+</head>
+<body>
+    
+    <div class="tools">
+        <div class="selectFilebox">
+            <input type="file" accept=".txt" name="file" id="file" class="clearfix">
+            <div class="selectfilebtn">选择文件</div>
+        </div>
+        <div class="downLoadbox">
+            <div class="downLoadbtn">
+                备份数据
+            </div>
+        </div>
+        <div class="importFilebox">
+            <input type="file" accept=".txt" name="importFile" id="importFile" class="clearfix">
+            <div class="importbtn">导入数据</div>
+        </div>
+        <div class="btnbox">
+            <div class="searchbtn btn">
+                <div class="content">搜索</div>
+                <div class="searchbox">
+                    <textarea name="" id="" spellcheck="false"></textarea>
+                    <div class="search">搜索</div>
+                </div>
+            </div>
+            <div class="notfoundbtn btn">
+                <div class="content">
+                    未搜索到
+                </div>
+                <ul class="words">
+                </ul>
+            </div>
+            <div class="descendingbtn btn">
+                <div class="content">
+                    降序排列
+                </div>
+            </div>
+        </div>    
+    </div>
+    <div class="go">
+        <div class="last">←</div><span>0</span>/<span>0</span><div class="next">→</div>
+    </div>
+    <div class="wordbox clearfix"></div>
+</body>
+</html>

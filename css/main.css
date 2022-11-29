@@ -1,0 +1,185 @@
+body{
+    margin: 0;
+    user-select: none;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.clearfix::before,
+.clearfix::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.tools{
+    height: 30px;
+    background-color: rgb(196, 185, 187);
+}
+/* 上传文件框 */
+#file{
+    display: none;
+}
+#importFile{
+    display: none;
+}
+.selectFilebox,.downLoadbox,.importFilebox{
+    float: left;
+    margin-left: 20px;
+    line-height: 30px;
+    padding: 0 14px;
+    background-color: rgb(164, 157, 158);
+    cursor: pointer;
+}
+.selectFilebox:hover,
+.downLoadbox:hover,
+.importFilebox:hover{
+    background-color: rgb(142, 125, 125);
+}
+/* 按钮盒子 */
+.btnbox{
+    position: absolute;
+    left: 500px;
+    width: 600px;
+    height: 30px; 
+    text-align: center;
+    z-index: 99;
+}
+.btnbox .content{
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 14px;
+    background-color: rgb(164, 157, 158);
+    cursor: pointer;
+}
+.btnbox .btn{
+    position: relative;
+    float: left;
+    margin-right: 100px;
+}
+.btnbox .btn:hover .content{
+    padding: 0 12px;
+    line-height: 26px;
+    border: 2px solid red;
+    border-bottom: 0;
+    background-color: rgb(201, 189, 191);
+    z-index: 1;
+}
+
+/* 搜索盒子 */
+.btnbox .searchbox{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    border: 2px solid red;
+    display: none;
+}
+.btnbox .searchbox textarea{
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 100px;
+    background-color: rgb(201, 189, 191);
+    resize: none;
+    border: 0;
+}
+.btnbox .searchbox .search{
+    margin:0 auto;
+    padding: 0 10px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: rgb(163, 155, 155);
+    cursor: pointer;
+}
+.btnbox .searchbox .search:hover{
+    background-color: #fff;
+}
+/* 未搜索到的单词列表 */
+.btnbox .notfoundbtn .words{
+    position: absolute;
+    top: 30px;
+    width: 200px;
+    border: 2px solid red;
+    background-color: rgb(201, 189, 191);
+    display: none;
+}
+.btnbox .notfoundbtn .words li{
+    border-bottom: 2px solid rgb(212, 205, 205);
+    border-top: 0;
+}
+.btnbox .notfoundbtn .words li:last-child{
+    border: 0;
+}
+.btnbox .searchbtn:hover .searchbox,
+.btnbox .notfoundbtn:hover .words{
+    display: block;
+}
+.btnbox .descendingbtn:hover .content{
+    height: 26px;
+    border-bottom: 2px solid red;
+}
+/* 上一个以及下一个盒子 */
+.go{
+    position: fixed;
+    top: 0;
+    right: 312px;
+    right: 0;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: rgb(150, 146, 146);
+    display: none;
+    z-index: 9999;
+}
+.go .last{
+    float: left;
+    width: 30px;
+    cursor: pointer;
+}
+.go .last:hover{
+    color: pink;
+}
+.go .next{
+    float: right;
+    width: 30px;
+    cursor: pointer;
+}
+.go .next:hover{
+    color: pink;
+}
+/* 单词盒子 */
+.wordbox{
+    position: relative;
+    float: left;
+    width: 4900px;
+    background-color: rgb(143, 134, 134);
+    /* background-color: hsl(90,90%,50%) */
+    /* zoom: 31%; */
+}
+.wordbox .word{
+    position: relative;
+    float: left;
+    margin: 10px 10px;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+.wordbox .times{
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(72, 57, 57);
+    display: none;
+}
